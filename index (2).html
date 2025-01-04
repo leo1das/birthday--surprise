@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Elakeiya</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial, sans-serif';
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      background-size: cover;
+      
+    }
+
+    .container {
+      text-align: center;
+      color: #fff;
+      padding: 50px 20px;
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+    }
+
+    .container h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .container p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .note {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      display: block;
+      color: #fff;
+      max-width: 600px;
+      margin: 0 auto; /* Center the note */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: slide-up 1s ease-out;
+    }
+
+    .surprise-btn {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #ff6f91;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .surprise-btn:hover {
+      background-color: #ff8ea1;
+    }
+
+    .surprise-message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+      display: none;
+      animation: fade-in 1s ease-in-out;
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #fff, 0 0 20px #f4c4f3, 0 0 30px #ff6ec7; }
+      100% { text-shadow: 0 0 20px #ff9ff3, 0 0 30px #f6a5c0, 0 0 40px #f9ded7; }
+    }
+
+    @keyframes slide-up {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Balloon Animation */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 50px;
+      height: 70px;
+      background-color: #ff6f91;
+      border-radius: 50%;
+      animation: float-balloon 10s infinite;
+      opacity: 0.8;
+    }
+
+    .balloon:nth-child(odd) {
+      background-color: #ff8ea1;
+    }
+
+    .balloon:nth-child(even) {
+      background-color: #f7c6e3;
+    }
+
+    @keyframes float-balloon {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateY(-600px) rotate(180deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-1200px) rotate(360deg);
+        opacity: 0.8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday, Elakeiya!</h1>
+    <p>Wishing you a day filled with love, joy, and happiness!</p>
+
+    <div class="note">
+      Dear Elakeiya, <br><br>
+      Happy Birthday ✨🌸🎉 Today is all about celebrating you and your laughter,
+      <br><br>
+      From all the childhood memories we’ve created to the moments we’ve annoyed and laughed at each other, you’ve always been my best friend. I’m so grateful to have you in my life.  
+      <br><br>
+      As you step into this new year, I hope it’s filled with all the happiness, love, and dreams you deserve. Never forget how truly special you are and how much you are loved.  
+      <br><br>
+      Enjoy your day to the fullest—you deserve all the cake, love, and joy in the world! 💖 and don't forget to give chocolates for me (this is important) 
+      <br><br>
+      With all my love,  
+      [DIVIYAAN ]
+    </div>
+
+    <!-- Surprise Button -->
+    <button class="surprise-btn" onclick="showSurprise()">Show Surprise</button>
+
+    <!-- Surprise Message -->
+    <div class="surprise-message" id="surprise-message">
+      🎉 compulsory you must give treat ! 🌟
+    </div>
+  </div>
+
+  <!-- Balloon Animation -->
+  <div class="balloon" style="left: 10%; animation-delay: 5s;"></div>
+  <div class="balloon" style="left: 25%; animation-delay: 6s;"></div>
+  <div class="balloon" style="left: 40%; animation-delay: 0s;"></div>
+  <div class="balloon" style="left: 60%; animation-delay: 3s;"></div>
+  <div class="balloon" style="left: 75%; animation-delay: 1s;"></div>
+  <div class="balloon" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+
+  <script>
+    function showSurprise() {
+      const surpriseMessage = document.getElementById('surprise-message');
+      surpriseMessage.style.display = 'block';
+      surpriseMessage.classList.add('fade-in');
+    }
+  </script>
+</body>
+</html>
